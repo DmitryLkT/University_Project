@@ -1,4 +1,4 @@
-package org.LukDT;
+package org.LukDT.model;
 
 public class Student {
     private String fullName, universityId;

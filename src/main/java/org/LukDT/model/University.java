@@ -1,11 +1,13 @@
-package org.LukDT;
+package org.LukDT.model;
+
+import org.LukDT.enums.StudyProfile;
 
 public class University {
     private String id, fullName, shortName;
     private int yearOfFoundation;
     private StudyProfile mainProfile;
 
-    University(String id, String fullName, String shortName, int yearOfFoundation,
+    public University(String id, String fullName, String shortName, int yearOfFoundation,
                StudyProfile mainProfile) {
         this.id = id;
         this.fullName = fullName;
