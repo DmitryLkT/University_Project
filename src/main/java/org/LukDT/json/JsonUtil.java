@@ -21,7 +21,7 @@ public final class JsonUtil {
 
         try(FileWriter writer = new FileWriter("studentCollection.json")) {
             gson.toJson(list, writer);
-            return gson.toJson(list);
+            return writer.toString();
         }catch(IOException e) {
             e.printStackTrace();
         }
@@ -60,7 +60,7 @@ public final class JsonUtil {
 
         try(FileWriter writer = new FileWriter("student.json")) {
             gson.toJson(s, writer);
-            return gson.toJson(s);
+            return writer.toString();
         }catch(IOException e) {
             e.printStackTrace();
         }
@@ -112,7 +112,7 @@ public final class JsonUtil {
 
         try(FileWriter writer = new FileWriter("university.json")) {
             gson.toJson(u, writer);
-            return gson.toJson(u);
+            return writer.toString();
         } catch(IOException e) {
             e.printStackTrace();
         }
