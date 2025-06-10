@@ -16,15 +16,16 @@ import java.util.List;
 public final class JsonUtil {
     private JsonUtil() {}
 
-    public static void StudentCollectionSerialization(List<Student> list) {
+    public static String StudentCollectionSerialization(List<Student> list) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try(FileWriter writer = new FileWriter("studentCollection.json")) {
             gson.toJson(list, writer);
-            System.out.println("Коллекция сериализованна");
+            return gson.toJson(list);
         }catch(IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public static List<Student> StudentCollectionDeserialization() {
@@ -54,27 +55,28 @@ public final class JsonUtil {
         return null;
     }
 
-    public static void StudentSerialization(Student s) {
+    public static String StudentSerialization(Student s) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try(FileWriter writer = new FileWriter("student.json")) {
             gson.toJson(s, writer);
+            return gson.toJson(s);
         }catch(IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println("Сериализованный JSON:\n" + gson.toJson(s));
+        return null;
     }
 
-    public static void UniversityCollectionSerialization(List<University> universities) {
+    public static String UniversityCollectionSerialization(List<University> universities) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try(FileWriter writer = new FileWriter("universityCollection.json")) {
             gson.toJson(universities, writer);
-            System.out.println("Коллекция сериализованна");
+            return gson.toJson(universities);
         }catch(IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public static List<University> UniversityCollectionDeserialization() {
@@ -105,15 +107,15 @@ public final class JsonUtil {
         return null;
     }
 
-    public static void UniversitySerialization(University u) {
+    public static String UniversitySerialization(University u) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try(FileWriter writer = new FileWriter("university.json")) {
             gson.toJson(u, writer);
+            return gson.toJson(u);
         } catch(IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println("Сериализованный JSON:\n" + gson.toJson(u));
+        return null;
     }
 }

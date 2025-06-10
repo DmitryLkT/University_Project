@@ -43,5 +43,7 @@ public class Main {
 
         JsonUtil.UniversityCollectionSerialization(universities);
         System.out.println(JsonUtil.UniversityCollectionDeserialization());
+
+        List<Student> stream = students.stream().filter()
     }
 }
