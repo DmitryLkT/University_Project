@@ -18,7 +18,7 @@ public class ReadXlsx {
 
     public static List<University> readUniversity() {
         List<University> list = new ArrayList<>();
-        String file = "D:/Calculator_TMP/universityInfo.xlsx";
+        String file = "src/main/resources/universityInfo.xlsx";
 
         try(FileInputStream fis = new FileInputStream(file);
             Workbook wb = new XSSFWorkbook(fis)) {
@@ -48,7 +48,7 @@ public class ReadXlsx {
     public static List<Student> readStudent() {
         List<Student> list = new ArrayList<>();
 
-        try(FileInputStream fis = new FileInputStream("D:/Calculator_TMP/universityInfo.xlsx");
+        try(FileInputStream fis = new FileInputStream("src/main/resources/universityInfo.xlsx");
             Workbook wb = new XSSFWorkbook(fis)) {
 
             Sheet sheet = wb.getSheetAt(0);

@@ -6,6 +6,7 @@ import org.LukDT.comparatorModel.university.UniversityComparator;
 
 import org.LukDT.enums.StudentComparatorOptions;
 import org.LukDT.enums.UniversityComparatorOptions;
+import org.LukDT.json.JsonUtil;
 import org.LukDT.model.Student;
 import org.LukDT.model.University;
 import org.LukDT.privateClass.Utils;
@@ -23,5 +24,12 @@ public class Main {
 
         students.stream().sorted(studentComparator).forEach(System.out::println);
         universities.stream().sorted(universityComparator).forEach(System.out::println);
+
+
+        JsonUtil.StudentSerialization(students.get(1));
+        System.out.println(JsonUtil.StudentDeserialization());
+
+        JsonUtil.UniversitySerialization(universities.get(0));
+        System.out.println(JsonUtil.UniversityDeserialization());
     }
 }

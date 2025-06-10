@@ -1,6 +1,8 @@
 package org.LukDT.model;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private String fullName, universityId;
     private int currentCourseNumber;
     private float avgExamScore;

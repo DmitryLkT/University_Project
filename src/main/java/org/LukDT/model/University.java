@@ -2,7 +2,9 @@ package org.LukDT.model;
 
 import org.LukDT.enums.StudyProfile;
 
-public class University {
+import java.io.Serializable;
+
+public class University implements Serializable {
     private String id, fullName, shortName;
     private int yearOfFoundation;
     private StudyProfile mainProfile;
