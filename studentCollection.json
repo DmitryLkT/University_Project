@@ -1,68 +1,68 @@
 [
   {
-    "fullName": "Иванов И. А.",
-    "universityId": "0002-high",
-    "currentCourseNumber": 2,
-    "avgExamScore": 4.0
+    "fullNameStudent": "Иванов И. А.",
+    "Id": "0002-high",
+    "courseNumber": 2,
+    "avg": 4.0
   },
   {
-    "fullName": "Козлов М. В.",
-    "universityId": "0002-high",
-    "currentCourseNumber": 2,
-    "avgExamScore": 4.6
+    "fullNameStudent": "Козлов М. В.",
+    "Id": "0002-high",
+    "courseNumber": 2,
+    "avg": 4.6
   },
   {
-    "fullName": "Фёдоров А. И.",
-    "universityId": "0002-high",
-    "currentCourseNumber": 3,
-    "avgExamScore": 4.2
+    "fullNameStudent": "Фёдоров А. И.",
+    "Id": "0002-high",
+    "courseNumber": 3,
+    "avg": 4.2
   },
   {
-    "fullName": "Игнатьев М. М.",
-    "universityId": "0003-high",
-    "currentCourseNumber": 4,
-    "avgExamScore": 4.3
+    "fullNameStudent": "Игнатьев М. М.",
+    "Id": "0003-high",
+    "courseNumber": 4,
+    "avg": 4.3
   },
   {
-    "fullName": "Соколов В. В.",
-    "universityId": "0004-high",
-    "currentCourseNumber": 1,
-    "avgExamScore": 4.8
+    "fullNameStudent": "Соколов В. В.",
+    "Id": "0004-high",
+    "courseNumber": 1,
+    "avg": 4.8
   },
   {
-    "fullName": "Сидоров Е. Г.",
-    "universityId": "0004-high",
-    "currentCourseNumber": 2,
-    "avgExamScore": 3.9
+    "fullNameStudent": "Сидоров Е. Г.",
+    "Id": "0004-high",
+    "courseNumber": 2,
+    "avg": 3.9
   },
   {
-    "fullName": "Витальев В. А.",
-    "universityId": "0001-high",
-    "currentCourseNumber": 2,
-    "avgExamScore": 4.0
+    "fullNameStudent": "Витальев В. А.",
+    "Id": "0001-high",
+    "courseNumber": 2,
+    "avg": 4.0
   },
   {
-    "fullName": "Петров П. А.",
-    "universityId": "0001-high",
-    "currentCourseNumber": 1,
-    "avgExamScore": 5.0
+    "fullNameStudent": "Петров П. А.",
+    "Id": "0001-high",
+    "courseNumber": 1,
+    "avg": 5.0
   },
   {
-    "fullName": "Алексеев С. В.",
-    "universityId": "0001-high",
-    "currentCourseNumber": 1,
-    "avgExamScore": 5.0
+    "fullNameStudent": "Алексеев С. В.",
+    "Id": "0001-high",
+    "courseNumber": 1,
+    "avg": 5.0
   },
   {
-    "fullName": "Иванов А. Г.",
-    "universityId": "0001-high",
-    "currentCourseNumber": 3,
-    "avgExamScore": 4.8
+    "fullNameStudent": "Иванов А. Г.",
+    "Id": "0001-high",
+    "courseNumber": 3,
+    "avg": 4.8
   },
   {
-    "fullName": "Васильев В. П.",
-    "universityId": "0001-high",
-    "currentCourseNumber": 4,
-    "avgExamScore": 4.7
+    "fullNameStudent": "Васильев В. П.",
+    "Id": "0001-high",
+    "courseNumber": 4,
+    "avg": 4.7
   }
 ]

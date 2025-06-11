@@ -1,12 +1,20 @@
 package org.LukDT.model;
 
+import com.google.gson.annotations.SerializedName;
 import org.LukDT.enums.StudyProfile;
 
 import java.io.Serializable;
 
 public class University implements Serializable {
-    private String id, fullName, shortName;
+    @SerializedName("number")
+    private String id;
+    @SerializedName("fullNameUn")
+    private String fullName;
+    @SerializedName("shortNameUn")
+    private String shortName;
+    @SerializedName("foundation")
     private int yearOfFoundation;
+    @SerializedName("profile")
     private StudyProfile mainProfile;
 
     public University(String id, String fullName, String shortName, int yearOfFoundation,

@@ -47,13 +47,23 @@ public class Main {
         System.out.println("---------------------");
 
         universities.stream()
-                //Выибаем отдельные объекты, которые основали полсе 1980 года
+                //Выбираем отдельные объекты, которые основали полсе 1980 года
                 .filter(u -> u.getYearOfFoundation() > 1980).
                 forEach(u -> {
                     //Выводим получившиеся JSON-строки
                     System.out.println(JsonUtil.UniversitySerialization(u));
                     //Выводим десериализованный объект
-                   // System.out.println(JsonUtil.UniversityDeserialization());
+                    System.out.println(JsonUtil.UniversityDeserialization());
         });
+
+        students.stream()
+                //Выбираем студентов 1-го курса
+                .filter(s -> s.getCurrentCourseNumber() == 1)
+                .forEach(s -> {
+                    //Выводим получившиеся JSON-строки
+                    System.out.println(JsonUtil.StudentSerialization(s));
+                    //Выводим десериализованный объект
+                    System.out.println(JsonUtil.StudentDeserialization());
+                });
     }
 }

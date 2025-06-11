@@ -1,7 +1,7 @@
 {
-  "id": "0007-high",
-  "fullName": "Казанский Университет Вычислений",
-  "shortName": "КУВ",
-  "yearOfFoundation": 1989,
-  "mainProfile": "MATHEMATICS"
+  "number": "0007-high",
+  "fullNameUn": "Казанский Университет Вычислений",
+  "shortNameUn": "КУВ",
+  "foundation": 1989,
+  "profile": "MATHEMATICS"
 }

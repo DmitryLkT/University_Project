@@ -1,6 +1,6 @@
 {
-  "fullName": "Козлов М. В.",
-  "universityId": "0002-high",
-  "currentCourseNumber": 2,
-  "avgExamScore": 4.6
+  "fullNameStudent": "Алексеев С. В.",
+  "Id": "0001-high",
+  "courseNumber": 1,
+  "avg": 5.0
 }

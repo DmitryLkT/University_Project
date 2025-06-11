@@ -1,10 +1,17 @@
 package org.LukDT.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Student implements Serializable {
-    private String fullName, universityId;
+    @SerializedName("fullNameStudent")
+    private String fullName;
+    @SerializedName("Id")
+    private String universityId;
+    @SerializedName("courseNumber")
     private int currentCourseNumber;
+    @SerializedName("avg")
     private float avgExamScore;
 
     public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
