@@ -36,16 +36,24 @@ public class Main {
         JsonUtil.UniversitySerialization(universities.get(0));
         System.out.println(JsonUtil.UniversityDeserialization());
 
-        JsonUtil.StudentCollectionSerialization(students);
+        System.out.println(JsonUtil.StudentCollectionSerialization(students));
         System.out.println(JsonUtil.StudentCollectionDeserialization());
 
         System.out.println("---------------------");
 
-        JsonUtil.UniversityCollectionSerialization(universities);
+        System.out.println(JsonUtil.UniversityCollectionSerialization(universities));
         System.out.println(JsonUtil.UniversityCollectionDeserialization());
 
-        universities.forEach(u -> {
+        System.out.println("---------------------");
 
+        universities.stream()
+                //Выибаем отдельные объекты, которые основали полсе 1980 года
+                .filter(u -> u.getYearOfFoundation() > 1980).
+                forEach(u -> {
+                    //Выводим получившиеся JSON-строки
+                    System.out.println(JsonUtil.UniversitySerialization(u));
+                    //Выводим десериализованный объект
+                   // System.out.println(JsonUtil.UniversityDeserialization());
         });
     }
 }

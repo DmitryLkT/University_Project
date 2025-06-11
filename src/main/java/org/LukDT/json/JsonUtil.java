@@ -18,14 +18,14 @@ public final class JsonUtil {
 
     public static String StudentCollectionSerialization(List<Student> list) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(list);
 
         try(FileWriter writer = new FileWriter("studentCollection.json")) {
-            gson.toJson(list, writer);
-            return writer.toString();
+            writer.write(json);
         }catch(IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return json;
     }
 
     public static List<Student> StudentCollectionDeserialization() {
@@ -33,9 +33,8 @@ public final class JsonUtil {
 
         try(FileReader reader = new FileReader("studentCollection.json")) {
             Type type = new TypeToken<List<Student>>(){}.getType();
-            List<Student> list = gson.fromJson(reader, type);
 
-            return list;
+            return gson.fromJson(reader, type);
         } catch(IOException e) {
             e.printStackTrace();
         }
@@ -46,9 +45,8 @@ public final class JsonUtil {
         Gson gson = new Gson();
 
         try(FileReader reader = new FileReader("student.json")) {
-            Student student = gson.fromJson(reader, Student.class);
+            return gson.fromJson(reader, Student.class);
 
-            return student;
         } catch(IOException e) {
             e.printStackTrace();
         }
@@ -57,26 +55,28 @@ public final class JsonUtil {
 
     public static String StudentSerialization(Student s) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(s);
 
         try(FileWriter writer = new FileWriter("student.json")) {
-            gson.toJson(s, writer);
-            return writer.toString();
+            writer.write(json);
         }catch(IOException e) {
             e.printStackTrace();
         }
-        return null;
+
+        return json;
     }
 
     public static String UniversityCollectionSerialization(List<University> universities) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String json = gson.toJson(universities);
 
         try(FileWriter writer = new FileWriter("universityCollection.json")) {
-            gson.toJson(universities, writer);
-            return gson.toJson(universities);
+            writer.write(json);
         }catch(IOException e) {
             e.printStackTrace();
         }
-        return null;
+
+        return json;
     }
 
     public static List<University> UniversityCollectionDeserialization() {
@@ -84,9 +84,8 @@ public final class JsonUtil {
 
         try(FileReader reader = new FileReader("universityCollection.json")) {
             Type type = new TypeToken<List<University>>(){}.getType();
-            List<University> list = gson.fromJson(reader, type);
 
-            return list;
+            return gson.fromJson(reader, type);
         }catch(IOException e) {
             e.printStackTrace();
         }
@@ -96,11 +95,9 @@ public final class JsonUtil {
 
     public static University UniversityDeserialization() {
         Gson gson = new Gson();
-
         try(FileReader reader = new FileReader("university.json")) {
-            University university = gson.fromJson(reader, University.class);
+            return gson.fromJson(reader, University.class);
 
-            return university;
         }catch (IOException e) {
             e.printStackTrace();
         }
@@ -109,13 +106,12 @@ public final class JsonUtil {
 
     public static String UniversitySerialization(University u) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
+        String json = gson.toJson(u);
         try(FileWriter writer = new FileWriter("university.json")) {
-            gson.toJson(u, writer);
-            return writer.toString();
+            writer.write(json);
         } catch(IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return json;
     }
 }
