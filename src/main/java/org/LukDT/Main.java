@@ -1,15 +1,15 @@
 package org.LukDT;
 
-import org.LukDT.File.ReadXlsx;
+import org.LukDT.File.XlsRead;
 import org.LukDT.comparatorModel.student.StudentComparator;
 import org.LukDT.comparatorModel.university.UniversityComparator;
 
 import org.LukDT.enums.StudentComparatorOptions;
 import org.LukDT.enums.UniversityComparatorOptions;
-import org.LukDT.json.JsonUtil;
+import org.LukDT.utils.JsonUtils;
 import org.LukDT.model.Student;
 import org.LukDT.model.University;
-import org.LukDT.privateClass.Utils;
+import org.LukDT.utils.SortedUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +17,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         //Создаем коллекции полученных данный из xlsx
-        List<Student> students = new ArrayList<>(ReadXlsx.readStudent());
-        List<University> universities = new ArrayList<>(ReadXlsx.readUniversity());
+        List<Student> students = new ArrayList<>(XlsRead.readStudent());
+        List<University> universities = new ArrayList<>(XlsRead.readUniversity());
 
         //Сортируем объекты при помощи компаратора
-        StudentComparator studentComparator = Utils.getStudentComparator(StudentComparatorOptions.FULL_NAME);
-        UniversityComparator universityComparator = Utils.getUniversityComparator(UniversityComparatorOptions.SHORT_NAME);
+        StudentComparator studentComparator = SortedUtils.getStudentComparator(StudentComparatorOptions.FULL_NAME);
+        UniversityComparator universityComparator = SortedUtils.getUniversityComparator(UniversityComparatorOptions.SHORT_NAME);
 
         //Выводем отсортированые объекты
         students.stream().sorted(studentComparator).forEach(System.out::println);
@@ -30,19 +30,19 @@ public class Main {
         universities.stream().sorted(universityComparator).forEach(System.out::println);
 
         //Выполняем сериализацию и десериализацию отдельных объектов и коллекций
-        JsonUtil.StudentSerialization(students.get(1));
-        System.out.println(JsonUtil.StudentDeserialization());
+        JsonUtils.StudentSerialization(students.get(1));
+        System.out.println(JsonUtils.StudentDeserialization());
 
-        JsonUtil.UniversitySerialization(universities.get(0));
-        System.out.println(JsonUtil.UniversityDeserialization());
+        JsonUtils.UniversitySerialization(universities.get(0));
+        System.out.println(JsonUtils.UniversityDeserialization());
 
-        System.out.println(JsonUtil.StudentCollectionSerialization(students));
-        System.out.println(JsonUtil.StudentCollectionDeserialization());
+        System.out.println(JsonUtils.StudentCollectionSerialization(students));
+        System.out.println(JsonUtils.StudentCollectionDeserialization());
 
         System.out.println("---------------------");
 
-        System.out.println(JsonUtil.UniversityCollectionSerialization(universities));
-        System.out.println(JsonUtil.UniversityCollectionDeserialization());
+        System.out.println(JsonUtils.UniversityCollectionSerialization(universities));
+        System.out.println(JsonUtils.UniversityCollectionDeserialization());
 
         System.out.println("---------------------");
 
@@ -51,9 +51,9 @@ public class Main {
                 .filter(u -> u.getYearOfFoundation() > 1980).
                 forEach(u -> {
                     //Выводим получившиеся JSON-строки
-                    System.out.println(JsonUtil.UniversitySerialization(u));
+                    System.out.println(JsonUtils.UniversitySerialization(u));
                     //Выводим десериализованный объект
-                    System.out.println(JsonUtil.UniversityDeserialization());
+                    System.out.println(JsonUtils.UniversityDeserialization());
         });
 
         students.stream()
@@ -61,9 +61,9 @@ public class Main {
                 .filter(s -> s.getCurrentCourseNumber() == 1)
                 .forEach(s -> {
                     //Выводим получившиеся JSON-строки
-                    System.out.println(JsonUtil.StudentSerialization(s));
+                    System.out.println(JsonUtils.StudentSerialization(s));
                     //Выводим десериализованный объект
-                    System.out.println(JsonUtil.StudentDeserialization());
+                    System.out.println(JsonUtils.StudentDeserialization());
                 });
     }
 }

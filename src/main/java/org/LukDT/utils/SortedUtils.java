@@ -1,12 +1,12 @@
-package org.LukDT.privateClass;
+package org.LukDT.utils;
 
 import org.LukDT.comparatorModel.student.*;
 import org.LukDT.comparatorModel.university.*;
 import org.LukDT.enums.StudentComparatorOptions;
 import org.LukDT.enums.UniversityComparatorOptions;
 
-public final class Utils {
-    private Utils() {}
+public final class SortedUtils {
+    private SortedUtils() {}
 
     public static StudentComparator getStudentComparator(StudentComparatorOptions sco) {
         switch(sco) {

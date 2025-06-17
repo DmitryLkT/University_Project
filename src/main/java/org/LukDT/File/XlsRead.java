@@ -11,10 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadXlsx {
-    private ReadXlsx() {
-
-    }
+public class XlsRead {
+    private XlsRead() {}
 
     public static List<University> readUniversity() {
         List<University> list = new ArrayList<>();

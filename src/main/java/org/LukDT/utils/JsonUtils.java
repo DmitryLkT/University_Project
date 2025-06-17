@@ -1,4 +1,4 @@
-package org.LukDT.json;
+package org.LukDT.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,8 +13,8 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 
-public final class JsonUtil {
-    private JsonUtil() {}
+public final class JsonUtils {
+    private JsonUtils() {}
 
     public static String StudentCollectionSerialization(List<Student> list) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
