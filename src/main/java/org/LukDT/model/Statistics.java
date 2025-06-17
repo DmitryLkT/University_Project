@@ -9,6 +9,10 @@ public class Statistics {
     private int statisticsCountUniversity;
     private String statisticsNameUniversity;
 
+    public Statistics() {
+
+    }
+
     public Statistics(StudyProfile statisticsProfile, float statisticsAvg, int statisticsCountStudents,
                       int statisticsCountUniversity, String statisticsNameUniversity) {
         this.statisticsProfile = statisticsProfile;
@@ -56,5 +60,16 @@ public class Statistics {
 
     public void setStatisticsNameUniversity(String statisticsNameUniversity) {
         this.statisticsNameUniversity = statisticsNameUniversity;
+    }
+
+    @Override
+    public String toString() {
+        return "Statistics{" +
+                "statisticsProfile=" + statisticsProfile +
+                ", statisticsAvg=" + statisticsAvg +
+                ", statisticsCountStudents=" + statisticsCountStudents +
+                ", statisticsCountUniversity=" + statisticsCountUniversity +
+                ", statisticsNameUniversity='" + statisticsNameUniversity + '\'' +
+                '}';
     }
 }

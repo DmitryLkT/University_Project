@@ -1,51 +1,51 @@
 [
   {
-    "id": "0001-high",
-    "fullName": "Московский Выдуманный Университет",
-    "shortName": "МВУ",
-    "yearOfFoundation": 1990,
-    "mainProfile": "PHYSICS"
+    "number": "0001-high",
+    "fullNameUn": "Московский Выдуманный Университет",
+    "shortNameUn": "МВУ",
+    "foundation": 1990,
+    "profile": "PHYSICS"
   },
   {
-    "id": "0002-high",
-    "fullName": "Московский Придуманный Институт",
-    "shortName": "МПИ",
-    "yearOfFoundation": 1987,
-    "mainProfile": "PHYSICS"
+    "number": "0002-high",
+    "fullNameUn": "Московский Придуманный Институт",
+    "shortNameUn": "МПИ",
+    "foundation": 1987,
+    "profile": "PHYSICS"
   },
   {
-    "id": "0003-high",
-    "fullName": "Московский Государственный Медицинский Университет",
-    "shortName": "МГМУ",
-    "yearOfFoundation": 1960,
-    "mainProfile": "MEDICINE"
+    "number": "0003-high",
+    "fullNameUn": "Московский Государственный Медицинский Университет",
+    "shortNameUn": "МГМУ",
+    "foundation": 1960,
+    "profile": "MEDICINE"
   },
   {
-    "id": "0004-high",
-    "fullName": "Тамбовский Университет Медицины",
-    "shortName": "ТУМ",
-    "yearOfFoundation": 1995,
-    "mainProfile": "MEDICINE"
+    "number": "0004-high",
+    "fullNameUn": "Тамбовский Университет Медицины",
+    "shortNameUn": "ТУМ",
+    "foundation": 1995,
+    "profile": "MEDICINE"
   },
   {
-    "id": "0005-high",
-    "fullName": "Самарский Медицинский Институт",
-    "shortName": "СМИ",
-    "yearOfFoundation": 1936,
-    "mainProfile": "MEDICINE"
+    "number": "0005-high",
+    "fullNameUn": "Самарский Медицинский Институт",
+    "shortNameUn": "СМИ",
+    "foundation": 1936,
+    "profile": "MEDICINE"
   },
   {
-    "id": "0006-high",
-    "fullName": "Воронежский Литературно-Переводческий Университет",
-    "shortName": "ВЛПУ",
-    "yearOfFoundation": 2003,
-    "mainProfile": "LINGUISTICS"
+    "number": "0006-high",
+    "fullNameUn": "Воронежский Литературно-Переводческий Университет",
+    "shortNameUn": "ВЛПУ",
+    "foundation": 2003,
+    "profile": "LINGUISTICS"
   },
   {
-    "id": "0007-high",
-    "fullName": "Казанский Университет Вычислений",
-    "shortName": "КУВ",
-    "yearOfFoundation": 1989,
-    "mainProfile": "MATHEMATICS"
+    "number": "0007-high",
+    "fullNameUn": "Казанский Университет Вычислений",
+    "shortNameUn": "КУВ",
+    "foundation": 1989,
+    "profile": "MATHEMATICS"
   }
 ]

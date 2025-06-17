@@ -1,11 +1,14 @@
 package org.LukDT;
 
 import org.LukDT.File.XlsRead;
+import org.LukDT.File.XlsWriter;
 import org.LukDT.comparatorModel.student.StudentComparator;
 import org.LukDT.comparatorModel.university.UniversityComparator;
 
 import org.LukDT.enums.StudentComparatorOptions;
 import org.LukDT.enums.UniversityComparatorOptions;
+import org.LukDT.model.Statistics;
+import org.LukDT.utils.CollectionProcessingUtils;
 import org.LukDT.utils.JsonUtils;
 import org.LukDT.model.Student;
 import org.LukDT.model.University;
@@ -44,7 +47,7 @@ public class Main {
         System.out.println(JsonUtils.UniversityCollectionSerialization(universities));
         System.out.println(JsonUtils.UniversityCollectionDeserialization());
 
-        System.out.println("---------------------");
+
 
         universities.stream()
                 //Выбираем отдельные объекты, которые основали полсе 1980 года
@@ -65,5 +68,14 @@ public class Main {
                     //Выводим десериализованный объект
                     System.out.println(JsonUtils.StudentDeserialization());
                 });
+
+        System.out.println("---------------------");
+
+        //Вызываем обработку статистики
+        List<Statistics> statistics = CollectionProcessingUtils.createStatistics(students, universities);
+        //Записываем статистику в отдельный файл
+        XlsWriter.writeUniversity(statistics);
+
+
     }
 }
