@@ -7,8 +7,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XlsWriter {
+    private static final Logger logger = Logger.getLogger(XlsWriter.class.getName());
     private static final String FILE = "src/main/resources/universityInfoStatistics.xlsx";
     private static final String SHEET_NAME = "Статистика";
     private static final String[] HEADERS = {
@@ -22,6 +25,9 @@ public class XlsWriter {
     private XlsWriter() {}
 
     public static void writeUniversity(List<Statistics> list) {
+
+        logger.info("Старт writeUniversity()");
+
         try(FileOutputStream fos = new FileOutputStream(FILE);
             Workbook wb = createTableStatistics()) {
 
@@ -46,11 +52,12 @@ public class XlsWriter {
             wb.write(fos);
 
         } catch(IOException e) {
-            throw new RuntimeException("Ошибка при записи в Excel ", e);
+            logger.log(Level.SEVERE, "Ошибка при записи в Excel");
         }
     }
 
     private static Workbook createTableStatistics() {
+        logger.info("Старт createTableStatistics()");
         //Создание новой книги Excel
         Workbook wb = new XSSFWorkbook();
         Sheet sheet = wb.createSheet(SHEET_NAME);

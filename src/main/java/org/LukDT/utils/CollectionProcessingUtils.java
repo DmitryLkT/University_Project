@@ -12,12 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Set;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public final class CollectionProcessingUtils {
+    private static final Logger logger = Logger.getLogger(CollectionProcessingUtils.class.getName());
+
     private CollectionProcessingUtils() {}
 
     public static List<Statistics> createStatistics(List<Student> students, List<University> universities) {
+        logger.info("Старт метода createStatistics()");
+
         List<Statistics> list = new ArrayList<>();
 
         Set<StudyProfile> profiles = universities.stream()

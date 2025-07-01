@@ -10,13 +10,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XlsRead {
     private XlsRead() {}
+    private static final Logger logger = Logger.getLogger(XlsRead.class.getName());
 
     public static List<University> readUniversity() {
         List<University> list = new ArrayList<>();
         String file = "src/main/resources/universityInfo.xlsx";
+
+        logger.info("Старт readUniversity()");
 
         try(FileInputStream fis = new FileInputStream(file);
             Workbook wb = new XSSFWorkbook(fis)) {
@@ -38,13 +43,15 @@ public class XlsRead {
             }
 
         } catch(IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Ошибка при чтении университетов");
         }
         return list;
     }
 
     public static List<Student> readStudent() {
         List<Student> list = new ArrayList<>();
+
+        logger.info("Старт readStudent()");
 
         try(FileInputStream fis = new FileInputStream("src/main/resources/universityInfo.xlsx");
             Workbook wb = new XSSFWorkbook(fis)) {
@@ -63,7 +70,7 @@ public class XlsRead {
                 list.add(new Student(name, id, course, avg));
             }
         } catch(IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Ошибка при чтении студентов");
         }
         return list;
     }
