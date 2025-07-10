@@ -2,17 +2,26 @@ package org.LukDT.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement(name = "student")
 public class Student implements Serializable {
+
     @SerializedName("fullNameStudent")
     private String fullName;
+
     @SerializedName("Id")
     private String universityId;
+
     @SerializedName("courseNumber")
     private int currentCourseNumber;
+
     @SerializedName("avg")
     private float avgExamScore;
+
+    public Student() {}
 
     public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
         this.fullName = fullName;
@@ -31,6 +40,7 @@ public class Student implements Serializable {
                 '}';
     }
 
+    @XmlElement
     public String getFullName() {
         return fullName;
     }
@@ -39,6 +49,7 @@ public class Student implements Serializable {
         this.fullName = fullName;
     }
 
+    @XmlElement
     public String getUniversityId() {
         return universityId;
     }
@@ -47,6 +58,7 @@ public class Student implements Serializable {
         this.universityId = universityId;
     }
 
+    @XmlElement
     public int getCurrentCourseNumber() {
         return currentCourseNumber;
     }
@@ -55,6 +67,7 @@ public class Student implements Serializable {
         this.currentCourseNumber = currentCourseNumber;
     }
 
+    @XmlElement
     public float getAvgExamScore() {
         return avgExamScore;
     }
