@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<allUniversity>
+    <university>
+        <fullName>Московский Выдуманный Университет</fullName>
+        <id>0001-high</id>
+        <mainProfile>PHYSICS</mainProfile>
+        <shortName>МВУ</shortName>
+        <yearOfFoundation>1990</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Московский Придуманный Институт</fullName>
+        <id>0002-high</id>
+        <mainProfile>PHYSICS</mainProfile>
+        <shortName>МПИ</shortName>
+        <yearOfFoundation>1987</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Московский Государственный Медицинский Университет</fullName>
+        <id>0003-high</id>
+        <mainProfile>MEDICINE</mainProfile>
+        <shortName>МГМУ</shortName>
+        <yearOfFoundation>1960</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Тамбовский Университет Медицины</fullName>
+        <id>0004-high</id>
+        <mainProfile>MEDICINE</mainProfile>
+        <shortName>ТУМ</shortName>
+        <yearOfFoundation>1995</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Самарский Медицинский Институт</fullName>
+        <id>0005-high</id>
+        <mainProfile>MEDICINE</mainProfile>
+        <shortName>СМИ</shortName>
+        <yearOfFoundation>1936</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Воронежский Литературно-Переводческий Университет</fullName>
+        <id>0006-high</id>
+        <mainProfile>LINGUISTICS</mainProfile>
+        <shortName>ВЛПУ</shortName>
+        <yearOfFoundation>2003</yearOfFoundation>
+    </university>
+    <university>
+        <fullName>Казанский Университет Вычислений</fullName>
+        <id>0007-high</id>
+        <mainProfile>MATHEMATICS</mainProfile>
+        <shortName>КУВ</shortName>
+        <yearOfFoundation>1989</yearOfFoundation>
+    </university>
+</allUniversity>

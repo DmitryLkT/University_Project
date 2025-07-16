@@ -2,16 +2,15 @@ package org.LukDT;
 
 import org.LukDT.File.XlsRead;
 import org.LukDT.File.XlsWriter;
+import org.LukDT.File.XmlWriter;
 import org.LukDT.comparatorModel.student.StudentComparator;
 import org.LukDT.comparatorModel.university.UniversityComparator;
 
 import org.LukDT.enums.StudentComparatorOptions;
 import org.LukDT.enums.UniversityComparatorOptions;
-import org.LukDT.model.Statistics;
+import org.LukDT.model.*;
 import org.LukDT.utils.CollectionProcessingUtils;
 import org.LukDT.utils.JsonUtils;
-import org.LukDT.model.Student;
-import org.LukDT.model.University;
 import org.LukDT.utils.SortedUtils;
 
 import java.util.ArrayList;
@@ -46,6 +45,11 @@ public class Main {
         List<Statistics> statistics = CollectionProcessingUtils.createStatistics(students, universities);
         //Записываем статистику в отдельный файл
         XlsWriter.writeUniversity(statistics);
+
+        //Генирируем XML-Структура для Student через "классы-обертку"
+        XmlWriter.writeToXml(new StudentList(students), "Students.xml");
+        XmlWriter.writeToXml(new UniversityList(universities), "University.xml");
+
 
 
     }
