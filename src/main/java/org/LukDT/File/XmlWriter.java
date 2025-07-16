@@ -7,11 +7,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class XmlWriter {
     private static final Logger logger = Logger.getLogger(XlsWriter.class.getName());
+    private static final LocalTime now = LocalTime.now().withNano(0);
+    private static final String time = String.valueOf(now).replace(":", "_");
 
     private XmlWriter() {}
 
@@ -30,7 +33,7 @@ public class XmlWriter {
 
         }
 
-        Path filePath = xmlWr.resolve(fileName);
+        Path filePath = xmlWr.resolve(time + fileName + ".xml");
 
         try {
             JAXBContext context = JAXBContext.newInstance(object.getClass());

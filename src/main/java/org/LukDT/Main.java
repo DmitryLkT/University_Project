@@ -47,8 +47,8 @@ public class Main {
         XlsWriter.writeUniversity(statistics);
 
         //Генирируем XML-Структура для Student через "классы-обертку"
-        XmlWriter.writeToXml(new StudentList(students), "Students.xml");
-        XmlWriter.writeToXml(new UniversityList(universities), "University.xml");
+        XmlWriter.writeToXml(new StudentList(students), "Students");
+        XmlWriter.writeToXml(new UniversityList(universities), "University");
 
 
 
