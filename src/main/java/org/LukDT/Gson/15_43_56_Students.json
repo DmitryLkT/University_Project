@@ -1,66 +1,66 @@
 [
   {
-    "fullNameStudent": "Иванов И. А.",
+    "fullNameStudent": "РРІР°РЅРѕРІ Р. Рђ.",
     "Id": "0002-high",
     "courseNumber": 2,
     "avg": 4.0
   },
   {
-    "fullNameStudent": "Козлов М. В.",
+    "fullNameStudent": "РљРѕР·Р»РѕРІ Рњ. Р’.",
     "Id": "0002-high",
     "courseNumber": 2,
     "avg": 4.6
   },
   {
-    "fullNameStudent": "Фёдоров А. И.",
+    "fullNameStudent": "Р¤С‘РґРѕСЂРѕРІ Рђ. Р.",
     "Id": "0002-high",
     "courseNumber": 3,
     "avg": 4.2
   },
   {
-    "fullNameStudent": "Игнатьев М. М.",
+    "fullNameStudent": "РРіРЅР°С‚СЊРµРІ Рњ. Рњ.",
     "Id": "0003-high",
     "courseNumber": 4,
     "avg": 4.3
   },
   {
-    "fullNameStudent": "Соколов В. В.",
+    "fullNameStudent": "РЎРѕРєРѕР»РѕРІ Р’. Р’.",
     "Id": "0004-high",
     "courseNumber": 1,
     "avg": 4.8
   },
   {
-    "fullNameStudent": "Сидоров Е. Г.",
+    "fullNameStudent": "РЎРёРґРѕСЂРѕРІ Р•. Р“.",
     "Id": "0004-high",
     "courseNumber": 2,
     "avg": 3.9
   },
   {
-    "fullNameStudent": "Витальев В. А.",
+    "fullNameStudent": "Р’РёС‚Р°Р»СЊРµРІ Р’. Рђ.",
     "Id": "0001-high",
     "courseNumber": 2,
     "avg": 4.0
   },
   {
-    "fullNameStudent": "Петров П. А.",
+    "fullNameStudent": "РџРµС‚СЂРѕРІ Рџ. Рђ.",
     "Id": "0001-high",
     "courseNumber": 1,
     "avg": 5.0
   },
   {
-    "fullNameStudent": "Алексеев С. В.",
+    "fullNameStudent": "РђР»РµРєСЃРµРµРІ РЎ. Р’.",
     "Id": "0001-high",
     "courseNumber": 1,
     "avg": 5.0
   },
   {
-    "fullNameStudent": "Иванов А. Г.",
+    "fullNameStudent": "РРІР°РЅРѕРІ Рђ. Р“.",
     "Id": "0001-high",
     "courseNumber": 3,
     "avg": 4.8
   },
   {
-    "fullNameStudent": "Васильев В. П.",
+    "fullNameStudent": "Р’Р°СЃРёР»СЊРµРІ Р’. Рџ.",
     "Id": "0001-high",
     "courseNumber": 4,
     "avg": 4.7

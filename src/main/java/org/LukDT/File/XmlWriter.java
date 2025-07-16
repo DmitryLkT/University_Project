@@ -22,15 +22,12 @@ public class XmlWriter {
         Path path = Paths.get("").toAbsolutePath();
         Path xmlWr = path.resolve("src/main/java/org/LukDT/XmlWr");
 
-        //if(Files.exists(xmlWr + fileName))
-
         try {
             if(!Files.exists(xmlWr)) {
                 Files.createDirectory(xmlWr);
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Ошибка при создании папки");
-
         }
 
         Path filePath = xmlWr.resolve(time + fileName + ".xml");

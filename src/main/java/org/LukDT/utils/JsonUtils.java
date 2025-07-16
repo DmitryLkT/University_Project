@@ -9,7 +9,12 @@ import org.LukDT.model.University;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
 import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,35 +22,53 @@ import java.util.logging.Logger;
 
 public final class JsonUtils {
     private static final Logger logger = Logger.getLogger(JsonUtils.class.getName());
+    private static final Path path = Paths.get("").toAbsolutePath();
+    private static final Path pathG = path.resolve("src/main/java/org/LukDT/Gson");
+    private static final LocalTime now = LocalTime.now().withNano(0);
+    private static final String time = String.valueOf(now).replace(":", "_");
 
     private JsonUtils() {}
 
-    public static String StudentCollectionSerialization(List<Student> list) {
-        logger.info("Старт метода StudentCollectionSerialization()");
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    public static <T> void collectionSerialization(List<T> list, String name) {
+        logger.info("Старт метода collectionSerialization()");
+
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .create();
+
         String json = gson.toJson(list);
 
-        try(FileWriter writer = new FileWriter("studentCollection.json")) {
-            writer.write(json);
-        }catch(IOException e) {
-            logger.log(Level.SEVERE, "Коллекцию не удалось сериалтзовать");
+        create(pathG);
+
+        String fileName = time + "_" + name + ".json";
+
+        Path filePath = pathG.resolve(fileName);
+
+        try {
+            Files.writeString(filePath, json);
+            logger.info("Файл успешно создан");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Ошибка сериализации");
+            throw new RuntimeException(e);
         }
-        return json;
     }
 
-    public static List<Student> StudentCollectionDeserialization() {
-        logger.info("Старт метода StudentCollectionDeserialization()");
+    public static <T> List<T> collectionDeserialization(String name, Class<T> clazz) {
+        logger.info("Старт метода collectionDeserialization()");
+
         Gson gson = new Gson();
+        Path path = pathG.resolve(name);
 
-        try(FileReader reader = new FileReader("studentCollection.json")) {
-            Type type = new TypeToken<List<Student>>(){}.getType();
-
+        try(Reader reader = Files.newBufferedReader(path)) {
+            Type type = TypeToken.getParameterized(List.class, clazz).getType();
             return gson.fromJson(reader, type);
+
         } catch(IOException e) {
-            logger.log(Level.SEVERE, "Коллекцию не удалось десериалтзовать");
+            logger.log(Level.SEVERE, "Ошибка десериализации");
+            throw new RuntimeException();
         }
-        return null;
     }
+
 
     public static Student StudentDeserialization() {
         logger.info("Старт метода StudentDeserialization()");
@@ -74,34 +97,6 @@ public final class JsonUtils {
         return json;
     }
 
-    public static String UniversityCollectionSerialization(List<University> universities) {
-        logger.info("Старт метода UniversityCollectionSerialization()");
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json = gson.toJson(universities);
-
-        try(FileWriter writer = new FileWriter("universityCollection.json")) {
-            writer.write(json);
-        }catch(IOException e) {
-            logger.log(Level.SEVERE, "Коллекцию не удалось сериалтзовать");
-        }
-
-        return json;
-    }
-
-    public static List<University> UniversityCollectionDeserialization() {
-        logger.info("Старт метода UniversityCollectionDeserialization()");
-        Gson gson = new Gson();
-
-        try(FileReader reader = new FileReader("universityCollection.json")) {
-            Type type = new TypeToken<List<University>>(){}.getType();
-
-            return gson.fromJson(reader, type);
-        }catch(IOException e) {
-            logger.log(Level.SEVERE, "Коллекцию не удалось десериалтзовать");
-        }
-        return null;
-    }
-
 
     public static University UniversityDeserialization() {
         logger.info("Старт метода UniversityDeserialization()");
@@ -125,5 +120,15 @@ public final class JsonUtils {
             logger.log(Level.SEVERE, "Объект не удалось сериалтзовать");
         }
         return json;
+    }
+
+    private static void create(Path path) {
+        try {
+            if(!Files.exists(path)) {
+                Files.createDirectory(path);
+            }
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Ошибка при создании папки");
+        }
     }
 }

@@ -47,9 +47,14 @@ public class Main {
         XlsWriter.writeUniversity(statistics);
 
         //Генирируем XML-Структура для Student через "классы-обертку"
-        XmlWriter.writeToXml(new StudentList(students), "Students");
-        XmlWriter.writeToXml(new UniversityList(universities), "University");
+//        XmlWriter.writeToXml(new StudentList(students), "Students");
+//        XmlWriter.writeToXml(new UniversityList(universities), "University");
 
+//        JsonUtils.collectionSerialization(students, "Students");
+//        JsonUtils.collectionSerialization(universities, "Universities");
+//        JsonUtils.collectionSerialization(statistics, "Statistics");
+
+        List<Student> st = JsonUtils.collectionDeserialization("15_43_56_Students.json", Student.class);
 
 
     }

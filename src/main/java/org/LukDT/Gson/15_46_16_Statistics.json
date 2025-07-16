@@ -1,0 +1,30 @@
+[
+  {
+    "statisticsProfile": "LINGUISTICS",
+    "statisticsAvg": 0.0,
+    "statisticsCountStudents": 0,
+    "statisticsCountUniversity": 1,
+    "statisticsNameUniversity": "Воронежский Литературно-Переводческий Университет;"
+  },
+  {
+    "statisticsProfile": "MATHEMATICS",
+    "statisticsAvg": 0.0,
+    "statisticsCountStudents": 0,
+    "statisticsCountUniversity": 1,
+    "statisticsNameUniversity": "Казанский Университет Вычислений;"
+  },
+  {
+    "statisticsProfile": "MEDICINE",
+    "statisticsAvg": 4.33,
+    "statisticsCountStudents": 3,
+    "statisticsCountUniversity": 3,
+    "statisticsNameUniversity": "Московский Государственный Медицинский Университет;Тамбовский Университет Медицины;Самарский Медицинский Институт;"
+  },
+  {
+    "statisticsProfile": "PHYSICS",
+    "statisticsAvg": 4.54,
+    "statisticsCountStudents": 8,
+    "statisticsCountUniversity": 2,
+    "statisticsNameUniversity": "Московский Выдуманный Университет;Московский Придуманный Институт;"
+  }
+]

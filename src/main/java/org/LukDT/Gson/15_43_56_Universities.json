@@ -1,0 +1,51 @@
+[
+  {
+    "number": "0001-high",
+    "fullNameUn": "Московский Выдуманный Университет",
+    "shortNameUn": "МВУ",
+    "foundation": 1990,
+    "profile": "PHYSICS"
+  },
+  {
+    "number": "0002-high",
+    "fullNameUn": "Московский Придуманный Институт",
+    "shortNameUn": "МПИ",
+    "foundation": 1987,
+    "profile": "PHYSICS"
+  },
+  {
+    "number": "0003-high",
+    "fullNameUn": "Московский Государственный Медицинский Университет",
+    "shortNameUn": "МГМУ",
+    "foundation": 1960,
+    "profile": "MEDICINE"
+  },
+  {
+    "number": "0004-high",
+    "fullNameUn": "Тамбовский Университет Медицины",
+    "shortNameUn": "ТУМ",
+    "foundation": 1995,
+    "profile": "MEDICINE"
+  },
+  {
+    "number": "0005-high",
+    "fullNameUn": "Самарский Медицинский Институт",
+    "shortNameUn": "СМИ",
+    "foundation": 1936,
+    "profile": "MEDICINE"
+  },
+  {
+    "number": "0006-high",
+    "fullNameUn": "Воронежский Литературно-Переводческий Университет",
+    "shortNameUn": "ВЛПУ",
+    "foundation": 2003,
+    "profile": "LINGUISTICS"
+  },
+  {
+    "number": "0007-high",
+    "fullNameUn": "Казанский Университет Вычислений",
+    "shortNameUn": "КУВ",
+    "foundation": 1989,
+    "profile": "MATHEMATICS"
+  }
+]
